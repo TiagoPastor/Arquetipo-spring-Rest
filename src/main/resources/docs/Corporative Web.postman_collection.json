@@ -1,0 +1,766 @@
+{
+	"info": {
+		"_postman_id": "660e17a0-1eb3-403e-8a47-74640e1fca4d",
+		"name": "Corporative Web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Usuarios - Listar Permissões",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{servidor}}/groups/1/permissions",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"groups",
+								"1",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios - Listar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsX25hbWUiOiJGZXJuYW5kbyIsInVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImZlcm5hbmRvanJzdWRAaG90bWFpbC5jb20iLCJzY29wZSI6WyJSRUFEIiwiV1JJVEUiXSwicGhvdG8iOiJodHRwczovL3d3dy5mZXJuYW5kb2pyLmNvbS5ici9pbWcvcHJvZmlsZS5qcGciLCJleHAiOjE2Mjk0MzA3MjQsImF1dGhvcml0aWVzIjpbIkVESVRBUl9VU1VBUklPU19HUlVQT1NfUEVSTUlTU09FUyIsIkNPTlNVTFRBUl9VU1VBUklPU19HUlVQT1NfUEVSTUlTU09FUyJdLCJqdGkiOiIzYmQ5OTUyNS00MTVjLTQwM2YtYTIzMy1mZWNjMWYzZGE1OTQiLCJjbGllbnRfaWQiOiJiYWNrLXdlYiJ9.OMyUs1UuYkNrSVC1lgMczdl0U8p1lgv-wwEbhkaUhT1XwN7JSQg3ilTF291Royzi49kf8DR7Kqb_iEzUcpPjyElpP8OEga9AqSdcPDFICNKsG55XBE_QSLkbKnZQBm0WY-TyhdaSQszhUHRoKBadBqCuk2sp2WB_Q21EzWI_qBwPYRMRl_AxkRhmFCccOT8l_OxWXswFkiUiv21MheUDibCedpn42pB-Br2zu9559vp5IPq0hM7ISttMNwnT0sO7yo829aHSI3Me-h_iVTj59rarZBWNXCYPLy7JjB9vYbM69NCU5I4XTAI8kkh8UAthjybTf6qJ5frQwTTRqwOjjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{servidor}}/users",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario - Buscar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{servidor}}/users/1",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario - Adicionar",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsX25hbWUiOiJGZXJuYW5kbyIsInVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImZlcm5hbmRvanJzdWRAaG90bWFpbC5jb20iLCJzY29wZSI6WyJ3cml0ZSIsInJlYWQiXSwicGhvdG8iOiJodHRwczovL3d3dy5mZXJuYW5kb2pyLmNvbS5ici9pbWcvcHJvZmlsZS5qcGciLCJleHAiOjE2MjkwMTIwOTUsImF1dGhvcml0aWVzIjpbIkNPTlNVTFRBUl9VU1VBUklPUyIsIkVESVRBUl9DTElOSUNBIl0sImp0aSI6IjFlMzg0ZGE4LTlhN2MtNGIxMS04ZTRiLWJkYTExOWI1ZmIzNiIsImNsaWVudF9pZCI6ImJhY2std2ViIn0.RxNAPg0BNp1xGJ3yBK9pxfTrKMzNNv5hvS0GbDJSmqJfsxauXMtXDYHC5OaxDUn0ks_uqE1N9j8PPxXHNzoLC2f704AuKVBe26o-cBzUtmEzhtMcptH0f6gWED7WkyAW4FdqeXpYknTuVCqVC616fzRQaysVlnQzzh1CCtPzmSaQnJ4XNZrNd5q5WvxWUCOPiSFycGk3jKOjYt5dJ4OowWdJ7pcwQCQVsYBSWFTeg_7J7IvMxBQP2zKmZ_FtTRBUdiANUH2_299kAXpzlyh-2b7nTsrzMJ_VTgPxTulMirOzRTYlCbkDInyCdC63ttLmTenD47xLOlNTtXa0ymWDhg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Fernando Dantas\",\r\n    \"userEmail\": \"teste@email.com\",\r\n    \"cryptedPass\": \"abc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{servidor}}/users",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario - Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"Fernando Dantass\",\r\n    \"userEmail\": \"fernandojrsud@hotmail.com\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{servidor}}/users/1",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario - Alterar Senha",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \r\n    \"actualCryptedPass\": \"123456\",\r\n    \"newCryptedPass\": \"def\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{servidor}}/users/1/cryptedPass",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"users",
+								"1",
+								"cryptedPass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario - Listar Grupos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{servidor}}/users/1/groups",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"users",
+								"1",
+								"groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario - Associar grupo",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "fernando",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Fernando Dantas\",\r\n    \"email\": \"fernando@jrsud@hotmail.com\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{servidor}}/users/1/groups",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"users",
+								"1",
+								"groups"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Grupos",
+			"item": [
+				{
+					"name": "Grupo - Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{servidor}}/groups",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Grupo - Buscar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{servidor}}/groups/1",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"groups",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Grupo  - Adicionar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{servidor}}/groups",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Grupo  - Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{servidor}}/groups/1",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"groups",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Grupo  - Listar Permissões",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{servidor}}/groups/1/permissions",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"groups",
+								"1",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Grupo  - Associar Permissões",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{servidor}}/groups/4/permissions/2",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"groups",
+								"4",
+								"permissions",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Grupo  - Remover",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{servidor}}/groups/4",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"groups",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permissions",
+			"item": [
+				{
+					"name": "Listar as permissoes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{servidor}}/permissions",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OAuth2",
+			"item": [
+				{
+					"name": "Refresh Token - Solicitar Token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "web123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "back-web",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "refresh_token",
+									"value": "ced65716-9bba-4176-88d4-62eab0ab48e9",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{servidor}}/oauth/token",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Password Flow - Solicitar Access Token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "back-web",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "web123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "fernandojrsud@hotmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{servidor}}/oauth/token",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authorization Code- Solicitar Token",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "code",
+									"value": "GEjpid",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "text"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "http://www.backanalitics.local:8082",
+									"type": "text"
+								},
+								{
+									"key": "code_verifier",
+									"value": "UqpL~9P9wpr~0f.4v1IvYXLuN1TOzJcvLVByHmYW8HhzuIh3HeafX0DzcMnYNdKE4-636luggOVSAHgrjb3UtfZPS4MwYlIKz46Jm4g4Tw7xG45W~T~myj7yiwC8Pw0h",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "backanalytics",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{servidor}}/oauth/token",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Client Credentials - Solicitar Token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "faturamento123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "faturamento",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{servidor}}/oauth/token",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"oauth",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "web123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "back-web",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjg1NzY3MTksInVzZXJfbmFtZSI6ImZlcm5hbmRvIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJqdGkiOiI1YjRmMjc3OS1hNjA0LTQ0MGUtYWU2Yy1hZTE3MTM2ZjkwYzEiLCJjbGllbnRfaWQiOiJiYWNrLXdlYiIsInNjb3BlIjpbIndyaXRlIiwicmVhZCJdfQ.oxMIRWqxwSkq-vJckHA7jK2WJjASc-kHlwX7J4NzRcc",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{servidor}}/oauth/check_token",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"oauth",
+								"check_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token Key",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{servidor}}/oauth/token_key",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								"oauth",
+								"token_key"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate JWKS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{servidor}}/.well-know/jwks.json",
+							"host": [
+								"{{servidor}}"
+							],
+							"path": [
+								".well-know",
+								"jwks.json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Root",
+			"item": [
+				{
+					"name": "Root Entry",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsX25hbWUiOiJGZXJuYW5kbyIsInVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImZlcm5hbmRvanJzdWRAaG90bWFpbC5jb20iLCJzY29wZSI6WyJSRUFEIiwiV1JJVEUiXSwicGhvdG8iOiJodHRwczovL3d3dy5mZXJuYW5kb2pyLmNvbS5ici9pbWcvcHJvZmlsZS5qcGciLCJleHAiOjE2Mjk0MzA0MzcsImF1dGhvcml0aWVzIjpbIkVESVRBUl9VU1VBUklPU19HUlVQT1NfUEVSTUlTU09FUyIsIkNPTlNVTFRBUl9VU1VBUklPU19HUlVQT1NfUEVSTUlTU09FUyJdLCJqdGkiOiI2Njk0OTk3ZC0xODZlLTRkOWYtOGMwZC1mZjJkMDhjNTUwZDYiLCJjbGllbnRfaWQiOiJiYWNrLXdlYiJ9.FpoEl3tE7dO7G_I-WpGwQ_nLv5ZwUjqYWxgZs-XaTsxr9RKha8L1akjMntFOIVcBw7H0MSzWRh7SneBm5Ghi5ElTaV09xZJFtpfQaB-hTEeKTBMiJpC2Hhit-pkwjj6zKSRjtYRWYt1NCMhqD6nwyrZNao3b7ILWcpHqy7WmBsUCW3LN8nUulpv13ECzQ2Jry6RN5CDG2qOD3G_YMv3WdcDMR4DzZ7egSiTubOcvK_ofDgxES12O_cBcTa_s_JpAG7mMwvtNvEEiYIdi2Cd6f6gWBNno247WsxPII3YpvasptnLr0x3Iqz0y7eaZfUD3ULKmenHpTmTs9SW8mjbV_A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{servidor}}",
+							"host": [
+								"{{servidor}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,28 @@
+#PCKCE WITH plain
+http://localhost:8003/oauth/authorize?response_type=code&client_id=backanalytics&redirect_uri=localhost:8003&code_challenge=f5gfg454fdguuu7u7u7u878e78ewer9e9r&code_challenge_method=plain
+
+#PKCE WITH SHA s256
+
+Code Verifier: UqpL~9P9wpr~0f.4v1IvYXLuN1TOzJcvLVByHmYW8HhzuIh3HeafX0DzcMnYNdKE4-636luggOVSAHgrjb3UtfZPS4MwYlIKz46Jm4g4Tw7xG45W~T~myj7yiwC8Pw0h
+Code Challenge: 23cOUTVpbwm_RqVMK_s-EDY4iLNTyUc21SIu7q9SUZg
+Online PKCE Generator Tool: https://tonyxu-io.github.io/pkce-generator/
+
+http://localhost:8003/oauth/authorize?response_type=code&client_id=backanalytics&redirect_uri=localhost:8003&code_challenge=23cOUTVpbwm_RqVMK_s-EDY4iLNTyUc21SIu7q9SUZg&code_challenge_method=s256
+
+Gerando um arquivo JKS com um par de chaves
+keytool -genkeypair -alias back-java -keyalg RSA -keypass 123456 -keystore back-java.jks -storepass 123456 -validity 3650
+
+Listando as entradas de um arquivo JKS
+keytool -list -keystore back-java.jks
+
+Gerando o certificado
+keytool -export -rfc -alias back-java -keystore back-java.jks -file back-java-cert.pem
+
+Gerando a chave pública com open ssl
+openssl x509 -pubkey -noout -in back-java-cert.pem > back-java-pkey.pem
+
+Gerar chave pública pelo endpoint
+Habilita no AuthorizationServerConfig
+.tokenKeyAccess("permitAll()")
+Enpoint que gerar a chave:
+localhost:8081/oauth/token_key
